@@ -7,6 +7,10 @@ MapRotator is a web application that visualizes geographical bearings and distan
 
 For 'compatibility' with amateur radio world, the map uses Maidenhead Grid locators for station and destination point nomination. More information about the Maidenhead Locator System at https://en.wikipedia.org/wiki/Maidenhead_Locator_System
 
+<p align=center>
+<img height="100" src="https://github.com/OH2LAK/MapRotator/blob/main/images/GUI_screenshot.png">
+
+
 ## Features
 - Supports both 6- and 8-character Maidenhead Locator for station location.
 - Display a map centered on a station's location.
