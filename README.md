@@ -4,11 +4,27 @@ This project has been COMPLETELY done by ChatGPT. I have had extensive dialog wi
 
 MapRotator is a web application that visualizes geographical bearings and distances from a given station location. This project uses Leaflet.js to display maps and allows users to interact with the map to see beamwidth and bearings.
 
+For 'compatibility' with amateur radio world, the map uses Maidenhead Grid locators for station and destination point nomination. More information about the Maidenhead Locator System at https://en.wikipedia.org/wiki/Maidenhead_Locator_System
+
 ## Features
+- Supports both 6- and 8-character Maidenhead Locator for station location.
 - Display a map centered on a station's location.
 - Click on the map to see the bearing, distance, and Maidenhead grid locator of the clicked point.
 - Visualize the antenna beamwidth from the station location towards the clicked point.
 - Few hi-resolution APRS map icons for the station Icon, a house with 6-element antenna (maybe good for VHF) and a house with a 2-element antenna (HF stuff evidently)
+
+## Usage
+- The web application is basically a web page and the default HTML file name is index.html so any normal web server will serve the page by default
+- The station Maidenhead Locator can be passed as a URL parameter or the default locator can be set in the main.js file.
+- The antenna beawidth (degrees) can be passed as a URL parameter or the default antenna beamwidth info can be set in the main.js file.
+
+Station location can be passed in either 6- or 8-character Maidenhead Locator as a URL parameter:
+
+```index.html?station=KP20IE or index.html?station?KP20IE55```
+
+Antenna beamwidth can be passed in degrees as a URL parameter combined with the station location (or alone):
+
+```index.html?station=KP20IE&beamwidth=60```
 
 ## More to be done (TO DO) 
 - Interface an antenna rotator the the application to get real-time information of antenna direction
@@ -20,10 +36,3 @@ MapRotator is a web application that visualizes geographical bearings and distan
 
 ### Prerequisites
 - A web server such as Nginx.
-
-### Local Installation
-
-1. **Clone the repository:**
-   ```sh
-   git clone https://github.com/yourusername/MapRotator.git
-   cd MapRotator
