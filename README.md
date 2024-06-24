@@ -13,18 +13,20 @@ For 'compatibility' with amateur radio world, the map uses Maidenhead Grid locat
 - Click on the map to see the bearing, distance, and Maidenhead grid locator of the clicked point.
 - Visualize the antenna beamwidth from the station location towards the clicked point.
 - Few hi-resolution APRS map icons for the station Icon, a house with 6-element antenna (maybe good for VHF) and a house with a 2-element antenna (HF stuff evidently)
-
-[!House with 2-element HF antenna](images/house-antenna-HF-2-el.png)
+<p>
+<img height="55" src="https://github.com/OH2LAK/MapRotator/blob/main/images/house-antenna-HF-2-el.png">
+<img height="55" src="https://github.com/OH2LAK/MapRotator/blob/main/images/house-antenna-VHF-6-el.png">
+</p>
 
 ## Usage
 - The web application is basically a web page and the default HTML file name is index.html so any normal web server will serve the page by default
 - The station Maidenhead Locator can be passed as a URL parameter or the default locator can be set in the main.js file.
 - The antenna beawidth (degrees) can be passed as a URL parameter or the default antenna beamwidth info can be set in the main.js file.
 
-Station location can be passed in either 6- or 8-character Maidenhead Locator as a URL parameter:
+Station location can be passed in either 6- or 8-character Maidenhead Locator as a URL parameter:<br>
   `index.html?station=KP20IE or index.html?station?KP20IE55`
 
-Antenna beamwidth can be passed in degrees as a URL parameter combined with the station location (or alone):
+Antenna beamwidth can be passed in degrees as a URL parameter combined with the station location (or alone):<br>
   `index.html?station=KP20IE&beamwidth=60`
 
 ## More to be done (TO DO) 
