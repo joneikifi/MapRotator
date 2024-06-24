@@ -1,6 +1,6 @@
 # MapRotator
 
-This project has been COMPLETELY done by ChatGPT. I have had extensive dialog with the ChatGPT telling what I want and I have been provided HTML and JavaScript files which I have copied and pasted to my development server and slowly with a lot of extra curves and U-turns the project has reached a milestone
+<span style="color:red">This project has been **COMPLETELY** done by ChatGPT. I have had an extensive dialog with the ChatGPT telling what I want and I have been provided HTML and JavaScript files which I have copied and pasted to my development server and slowly with a lot of extra curves and U-turns the project has reached a milestone so that it basically works and has reached the basic functionality what I was looking for.</span>
 
 MapRotator is a web application that visualizes geographical bearings and distances from a given station location. This project uses Leaflet.js to display maps and allows users to interact with the map to see beamwidth and bearings.
 
@@ -19,12 +19,10 @@ For 'compatibility' with amateur radio world, the map uses Maidenhead Grid locat
 - The antenna beawidth (degrees) can be passed as a URL parameter or the default antenna beamwidth info can be set in the main.js file.
 
 Station location can be passed in either 6- or 8-character Maidenhead Locator as a URL parameter:
-
-```index.html?station=KP20IE or index.html?station?KP20IE55```
+  `index.html?station=KP20IE or index.html?station?KP20IE55`
 
 Antenna beamwidth can be passed in degrees as a URL parameter combined with the station location (or alone):
-
-```index.html?station=KP20IE&beamwidth=60```
+  `index.html?station=KP20IE&beamwidth=60`
 
 ## More to be done (TO DO) 
 - Interface an antenna rotator the the application to get real-time information of antenna direction
