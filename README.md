@@ -5,10 +5,11 @@
 
 MapRotator is a web application that visualizes geographical bearings and distances from a given station location. This project uses Leaflet.js to display maps and allows users to interact with the map to see beamwidth and bearings.
 
-For 'compatibility' with amateur radio world, the map uses Maidenhead Grid locators for station and destination point nomination. More information about the Maidenhead Locator System at https://en.wikipedia.org/wiki/Maidenhead_Locator_System
-
 <p align=center>
-<img height="100" src="https://github.com/OH2LAK/MapRotator/blob/main/images/GUI_screenshot.png">
+<img src="https://github.com/OH2LAK/MapRotator/blob/main/images/GUI_screenshot.png">
+</p>
+
+For 'compatibility' with amateur radio world, the map uses Maidenhead Grid locators for station and destination point nomination. More information about the Maidenhead Locator System at https://en.wikipedia.org/wiki/Maidenhead_Locator_System
 
 
 ## Features
