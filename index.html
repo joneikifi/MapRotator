@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>OH2LAK MapRotator</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/antenna.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css?v=1.0.0" />
+    <style>
+        #map { height: 100vh; }
+        #info {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: white;
+            padding: 10px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="info">
+        <div>Station Maidenhead: <span id="station-maidenhead"></span></div>
+        <div>Clicked Maidenhead: <span id="clicked-maidenhead"></span></div>
+        <div>Distance: <span id="distance"></span></div>
+        <div>Bearing: <span id="bearing"></span></div>
+        <div>Beamwidth: <span id="beamwidth"></span></div>
+    </div>
+    <script src="https://unpkg.com/leaflet@latest/dist/leaflet.js?v=1.0.0"></script>
+    <script src="https://unpkg.com/leaflet.geodesic@latest/dist/leaflet.geodesic.umd.min.js?v=1.0.0"></script>
+    <script src="maidenhead.js?v=1.0.0"></script>
+    <script src="utils.js?v=1.0.0"></script>
+    <script src="geodeticarc.js?v=1.0.0"></script>
+    <script src="beamwidth.js?v=1.0.0"></script>
+    <script src="markers.js?v=1.0.0"></script>
+    <script src="main.js?v=1.0.0"></script>
+</body>
+</html>
