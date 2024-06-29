@@ -58,7 +58,12 @@ function initializeApp() {
 
         // Display the clicked position as a marker with bearing, distance, and Maidenhead grid locator
         destinationMarker = L.marker(clickedLatLng).addTo(map)
-            .bindPopup('Bearing: ' + bearing.toFixed(2) + ' degrees<br>Distance: ' + (distance / 1000).toFixed(2) + ' km<br>Maidenhead: ' + destinationMaidenhead)
+            .bindPopup('Bearing: ' + bearing.toFixed(2) + ' degrees<br>' +
+		       'Distance: ' + (distance / 1000).toFixed(2) + ' km<br>' +
+		       'Coordinates: ' +
+		       Math.abs(clickedLatLng.lat).toFixed(5) + '° ' + (clickedLatLng.lon < 0 ? 'S' : 'N') + ', ' +
+		       Math.abs(clickedLatLng.lng).toFixed(5) + '° ' + (clickedLatLng.lng < 0 ? 'W' : 'E') + '<br>' +
+		       'Locator: <code>' + destinationMaidenhead + '</code>')
             .openPopup();
 
         // Draw geodetic arc from station to clicked point
