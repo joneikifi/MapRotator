@@ -18,8 +18,6 @@ function calculateBearing(point1, point2) {
 function drawGeodeticArc(point1, point2, map) {
     geodeticArcLayer = L.layerGroup().addTo(map); // Initialize the geodeticArcLayer if not already initialized
 
-    var points = [point1, point2];
-
     L.geodesic([[point1, point2]], {
         weight: 2,
         color: 'red',
