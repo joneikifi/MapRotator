@@ -10,7 +10,7 @@ function drawAntennaBeamwidth(map, centerPoint, bearing, widthDegrees, distance)
     beamwidthLayer = L.layerGroup().addTo(map);
 
     // Increase the distance by 10%
-    var longerDistance = distance * 1.1;
+    var longerDistance = distance * 1.0;
 
     var beamwidth = widthDegrees / 2;
     var beamPoints = [];
@@ -21,13 +21,8 @@ function drawAntennaBeamwidth(map, centerPoint, bearing, widthDegrees, distance)
     var maxIterations = Math.ceil(longerDistance / step); // Use longer distance for iterations
 
     // Calculate bearings for left and right edges of the beamwidth
-    var leftBearing = (bearing - beamwidth + 360) % 360;
-    var rightBearing = (bearing + beamwidth + 360) % 360;
-
-    // Adjust rightBearing if it exceeds 360 degrees
-    if (rightBearing >= 360) {
-        rightBearing -= 360;
-    }
+    var leftBearing = (bearing - beamwidth + 360);
+    var rightBearing = (bearing + beamwidth + 360);
 
     // Generate points for the beamwidth polygon
     for (var i = 0; i <= maxIterations; i++) {
@@ -38,9 +33,13 @@ function drawAntennaBeamwidth(map, centerPoint, bearing, widthDegrees, distance)
         beamPoints.unshift([rightDestination.lat, rightDestination.lng]);
     }
 
-    console.log('Left Bearing:', leftBearing,'right bearing:', rightBearing,'stepping',step);
+    var beamArcSteps = 20;
+    for (var i = 1; i < beamArcSteps; i++) {
+	var middleDestination = centerPoint.destination(longerDistance, leftBearing + (rightBearing-leftBearing)/beamArcSteps*i);
+	beamPoints.push([middleDestination.lat, middleDestination.lng]);
+    }
 
-   
+    console.log('Left Bearing:', leftBearing,'right bearing:', rightBearing,'stepping',step);
 
     // Close the polygon
     beamPoints.push([beamPoints[0][0], beamPoints[0][1]]);
